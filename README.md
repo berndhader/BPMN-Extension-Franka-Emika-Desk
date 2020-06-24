@@ -8,6 +8,23 @@ The BPMN-Desk extension enables the web-based creation and execution of collabor
 [Business Process Model and Notation](https://www.bpmn.org) (short BPMN) is a visual modeling language for business processes. By using a so-called BPMN-engine since version 1.2 also the execution of the processes is possible. For the execution of the created human-robot processes Camunda BPM was used. [Camunda BPM](https://camunda.com/) is a widespread open source project, which provides various tools for modelling as well as for executing BPMN 2.0 models.
 For the user interface of the BPMN extension the open source project [BPMN.iO](https://bpmn.io/) was used as a basis. BPMN.iO provides tools that enable the creation of BPMN 2.0 models in the browser.
 
+### Adaptive Task sharing
+
+The project also contains an extended version regarding adaptive task sharing.  Here an overview page was added, which loads three predefined BPMN models.
+
+<img src="./docs/adaptive-task-sharing-1.png" alt="Adaptive Task Sharing Prototype">
+<br /><br />
+
+ In the lower area the respective preview appears.
+
+<img src="./docs/adaptive-task-sharing-2.png" alt="Adaptive Task Sharing Prototype">
+<br /><br />
+
+By clicking on one of the models it will be loaded into the modeling environment and can be executed.
+
+<img src="./docs/adaptive-task-sharing-3.png" alt="Adaptive Task Sharing Prototype">
+<br /><br />
+
 ## How it works
 
 The extension allows a web-based creation and execution of workflows between human and robot using BPMN. For this purpose, so-called Service Tasks and User Tasks are used.
@@ -73,9 +90,9 @@ Start up Camunda. You can check if it is running by opening the following link. 
 Download and unzip Prototype.zip. Copy the folder into the "webapps" directory of your Camunda BPMN installation.
 
 #### Update Panda Authentication Token
-Update the Panda authentication token in Task-Client/app.js.
+Update the Panda authentication credentials (Desk login) in Task-Client/settings.js.
 
-<img src="./docs/update-panda-token.png" width="500" alt="Update Panda Authentication Token">
+<img src="./docs/update-panda-authentication.png" width="500" alt="Update Panda Authentication Credentials">
 
 
 #### Start NodeJS Task Client
@@ -92,8 +109,16 @@ Open the UI in your browser and create a new process or use an existing one:
 <br /><br />
 <img src="./docs/open-bpmn-ui-example-2.png" alt="BPMN-Extension UI">
 <br />
+<br />
 
+#### Adaptive Task Sharing Extension
+To execute the adaptive task sharing variant, follow all steps from above and open the following URL:
+[http://localhost:8080/PandaBPMN/Prototype/AdaptiveTaskSharing/index.html](http://localhost:8080/PandaBPMN/Prototype/AdaptiveTaskSharing/index.html).
 
+The stored BPMN models are located in AdaptiveTaskSharing/staticBPMNFiles.js.
+
+<img src="./docs/adaptive-task-sharing-1.png" alt="Adaptive Task Sharing Prototype">
+<br /><br />
 
 ## Demo video
 Here's a demo video where you can see the prototype in action. In the video this prototype is used to assemble a heat sink.
